@@ -1,3 +1,2406 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/679ae29b5222c7366b389180.679ae29b5222c7366b389183.ix9bhpF.hcp.png");
+
+/* @font-face {
+  font-family: "AeonikMGEN-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Satoshi-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AeonikMGEN-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ariblk.ttf") format("truetype");
+} */
+
+@font-face {
+  font-family: "AeonikMGEN-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AeonikTRIAL-Regular.otf") format('opentype');
+}
+@font-face {
+  font-family: "AeonikMGEN-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/AeonikTRIAL-Bold.otf") format('opentype');
+}
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root { 
+  --black: #000000;
+  --gray-nurse: #e7e9eb;
+  --green-pea: #286937;
+  --masala: #3c3c3c;
+  --white: #ffffff;
+  --wild-sand: #f3f4f5;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 40px;
+  --font-size-xxxxl: 64px;
+ 
+  --font-family-aeonik_mgen-bold: "AeonikMGEN-Bold";
+  --font-family-aeonik_mgen-regular: "AeonikMGEN-Regular";
+  --font-family-arial-bold: "Arial-Bold", Helvetica;
+  --font-family-arial-regular: "Arial-Regular", Helvetica;
+}
+.mgenheadingssubheading {
+  @apply tw-text-[calc(9/375*100vw)] sm:tw-text-[calc(8/640*100vw)] md:tw-text-[calc(var(--font-size-l))];
+  font-family: var(--font-family-arial-regular);
+  /* font-size: var(--font-size-l); */
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.mgenbodybody-regular {
+  font-family: var(--font-family-arial-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.mgenheadingsh2 {
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.mgenbodybody-small {
+  font-family: var(--font-family-arial-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.mgendisplaydisplay-large {
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.arial-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.aeonikmgen-bold-masala-64px {
+  @apply tw-text-[24px] md:tw-text-[calc(var(--font-size-xxxxl))];
+  color: var(--masala);
+  font-family: var(--font-family-aeonik_mgen-bold);
+  /* font-size: var(--font-size-xxxxl); */
+  font-style: normal;
+  font-weight: 700;
+}
+
+.arial-bold-green-pea-16px {
+  @apply tw-text-[14px] md:tw-text-[calc(var(--font-size-m))];
+  color: var(--green-pea);
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.arial-bold-masala-16px {
+  @apply tw-text-[14px] md:tw-text-[calc(var(--font-size-m))];
+  color: var(--masala);
+  font-family: var(--font-family-arial-bold);
+  /* font-size: var(--font-size-m); */
+  font-style: normal;
+  font-weight: 700;
+}
+
+.aeonikmgen-regular-normal-masala-64px {
+  @apply tw-text-[24px] md:tw-text-[calc(var(--font-size-xxxxl))];
+  color: var(--masala);
+  font-family: var(--font-family-aeonik_mgen-regular);
+  /* font-size: var(--font-size-xxxxl); */
+  font-style: normal;
+  font-weight: 400;
+}
+
+.arial-bold-white-24px {
+  color: var(--white);
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.arial-bold-masala-12px {
+  color: var(--masala);
+  font-family: var(--font-family-arial-bold);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.aeonikmgen-bold-green-pea-40px {
+  @apply tw-text-[25px] md:tw-text-[calc(var(--font-size-xxxl))];
+  color: var(--green-pea);
+  font-family: var(--font-family-aeonik_mgen-bold);
+  /* font-size: var(--font-size-xxxl); */
+  font-style: normal;
+  font-weight: 700;
+}
+
+.arial-bold-masala-20px {
+  @apply tw-text-[0.7rem] sm:tw-text-[1rem] md:tw-text-[15px] lg:tw-text-[calc(var(--font-size-l))];
+  color: var(--masala);
+  font-family: var(--font-family-arial-bold);
+  /* font-size: var(--font-size-l); */
+  font-style: normal;
+  font-weight: 700;
+}
+
+.aeonikmgen-bold-white-32px {
+  color: var(--white);
+  font-family: var(--font-family-aeonik_mgen-bold);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.aeonikmgen-bold-white-28px {
+  color: var(--white);
+  font-family: var(--font-family-aeonik_mgen-bold);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* screen - landing-page-employeur */
+
+.landing-page-employeur {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .head {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .header {
+  @apply tw-h-[60px] md:tw-h-[93px];
+
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .mgen-logo {
+  @apply tw-scale-[0.7] md:tw-scale-100;
+
+  height: 59px;
+  margin-bottom: -7.00px;
+  margin-top: -7.00px;
+  position: relative;
+  width: 51px;
+}
+
+.landing-page-employeur .mgen_-logotype_-endossement_-noir_cmjn {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 59px;
+}
+
+.landing-page-employeur .group {
+  align-items: flex-end;
+  background-image: url(../img/path-6.svg);
+  background-size: 100% 100%;
+  display: flex;
+  gap: 1px;
+  height: 49px;
+  min-width: 51px;
+  padding: 10.5px 0;
+}
+
+.landing-page-employeur .path {
+  height: 10px;
+  margin-bottom: 4.58px;
+  width: 14px;
+}
+
+.landing-page-employeur .overlap-group {
+  height: 14px;
+  position: relative;
+  width: 18px;
+}
+
+.landing-page-employeur .shape {
+  height: 10px;
+  left: 9px;
+  position: absolute;
+  top: 0;
+  width: 9px;
+}
+
+.landing-page-employeur .shape-1 {
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 10px;
+}
+
+.landing-page-employeur .path-container {
+  align-items: flex-end;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 1.11px;
+  min-height: 18px;
+  width: 12px;
+}
+
+.landing-page-employeur .path-1 {
+  height: 6px;
+  width: 6px;
+}
+
+.landing-page-employeur .path-2 {
+  height: 10px;
+  margin-right: 4.07px;
+  width: 8px;
+}
+
+.landing-page-employeur .group-1 {
+  align-items: center;
+  display: flex;
+  margin-left: 4.09px;
+  min-width: 43px;
+}
+
+.landing-page-employeur .path-3 {
+  height: 3px;
+  margin-bottom: 1.37px;
+  width: 3px;
+}
+
+.landing-page-employeur .shape-2 {
+  height: 3px;
+  margin-bottom: 1.37px;
+  margin-left: 2px;
+  width: 2px;
+}
+
+.landing-page-employeur .shape-3 {
+  height: 3px;
+  margin-bottom: 1.37px;
+  margin-left: 2px;
+  width: 3px;
+}
+
+.landing-page-employeur .path-4 {
+  height: 3px;
+  margin-bottom: 1.33px;
+  margin-left: 2px;
+  width: 2px;
+}
+
+.landing-page-employeur .group-item {
+  height: 3px;
+  margin-bottom: 1.38px;
+  margin-left: 2px;
+  width: 2px;
+}
+
+.landing-page-employeur .path-5 {
+  align-self: flex-start;
+  height: 4px;
+  margin-left: 3px;
+  margin-top: 0;
+  width: 5px;
+}
+
+.landing-page-employeur .path-6 {
+  align-self: flex-end;
+  height: 6px;
+  margin-bottom: 0;
+  width: 5px;
+}
+
+.landing-page-employeur .path-7 {
+  align-self: flex-start;
+  height: 4px;
+  width: 5px;
+}
+
+.landing-page-employeur .frame-427318978 {
+  align-items: center;
+  align-self: stretch;
+  flex: 0 0 auto;
+  gap: 24px;
+  justify-content: flex-end;
+  padding: 8px 0px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427318968 {
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 8px;
+  height: 44px;
+  margin-bottom: -7.50px;
+  margin-top: -7.50px;
+  padding: 0px 8px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427318969 {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.landing-page-employeur .support {
+  letter-spacing: 0;
+  line-height: 16px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .frame-427318981 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  margin-bottom: -7.50px;
+  margin-top: -7.50px;
+  position: relative;
+}
+
+.landing-page-employeur .button-4 {
+  background-color: #f4fce8;
+  border-radius: 8px;
+  gap: 10px;
+  padding: 8px 24px;
+}
+
+.landing-page-employeur .common-actionsuser {
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+
+.landing-page-employeur .label {
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .button-5 {
+  background-color: var(--green-pea);
+  border-radius: 8px;
+  gap: 8px;
+  height: 44px;
+  padding: 8px 24px;
+}
+
+.landing-page-employeur .frame-427318971 {
+  align-items: center;
+  gap: 40px;
+  left: 183px;
+  position: absolute;
+  top: 32px;
+}
+
+.landing-page-employeur .label-2 {
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.landing-page-employeur .label-3 {
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.landing-page-employeur .hero {
+  /* @apply tw-h-[365px] md:tw-h-[561px] tw-bg-[68%_50%] md:tw-bg-[50%_50%]; */
+  @apply tw-bg-[68%_50%] md:tw-bg-[50%_50%];
+  align-items: flex-start;
+  background-image: url(../img/hero.png);
+  /* background-position: 50% 50%; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  /* height: 561px; */
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.landing-page-employeur .content-1 {
+  /* @apply tw-h-[365px] md:tw-h-[561px] tw-p-[10px_20px] md:tw-p-[24px_72px]; */
+  @apply tw-p-[10px_20px] md:tw-p-[83px_72px];
+  align-items: flex-start;
+  background: linear-gradient(88.22deg, rgba(0, 0, 0, 0.4) 37.69%, rgba(0, 0, 0, 0) 62.28%);
+  flex-direction: column;
+  gap: 16px;
+  /* height: 561px; */
+  justify-content: center;
+  /* padding: 24px 72px; */
+  /* width: 1280px; */
+  width: 100%;
+}
+
+
+
+.landing-page-employeur .mgen-mutuelle-sant {
+  color: var(--white);
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .la-premire-mutuelle {
+  @apply tw-leading-[45px] tw-text-[42px] md:tw-text-[64px] md:tw-leading-[72px] md:tw-font-[var(--font-size-xxxxl)] tw-w-full md:tw-w-[607px];
+  color: var(--white);
+  font-family: var(--font-family-aeonik_mgen-bold);
+  font-weight: 700;
+  letter-spacing: 0;
+  position: relative;
+}
+
+.landing-page-employeur .button {
+  align-items: center;
+  background-color: var(--green-pea);
+  border-radius: 8px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px 32px;
+  position: relative;
+}
+
+.landing-page-employeur .label-1 {
+  letter-spacing: 0;
+  line-height: 32px;
+  text-align: center;
+}
+
+.landing-page-employeur .top-cta {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  overflow: hidden;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 56px;
+  justify-content: flex-end;
+  padding: 80px 72px 40px;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.landing-page-employeur .choisissez-le-meille {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .values-1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.landing-page-employeur .values-2 {
+  display: inline-flex;
+}
+
+.landing-page-employeur .x1 {
+  align-items: flex-end;
+  background-image: url(../img/1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  display: flex;
+  height: 377px;
+  justify-content: center;
+  position: relative;
+  width: 266px;
+}
+
+.landing-page-employeur .frame-42731916 {
+  align-items: center;
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.8) 100%);
+  border-radius: 0px 0px 24px 24px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+}
+
+.landing-page-employeur .x-et {
+  color: var(--white);
+  flex: 1;
+  font-family: var(--font-family-aeonik_mgen-bold);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .x2 {
+  align-items: center;
+  background-color: #ffe37f;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 473px;
+  overflow: hidden;
+  position: relative;
+  width: 311px;
+}
+
+.landing-page-employeur .frame-103 {
+  align-items: center;
+  background-image: url(../img/frame-103@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 473px;
+  margin-left: -0.50px;
+  margin-right: -0.50px;
+  padding: 24px;
+  position: relative;
+  width: 312px;
+}
+
+.landing-page-employeur .une-appli-mobile-pou {
+  color: var(--masala);
+  font-family: var(--font-family-aeonik_mgen-bold);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  position: relative;
+  width: 263px;
+}
+
+.landing-page-employeur .x3 {
+  align-items: flex-end;
+  background-image: url(../img/3@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  display: flex;
+  height: 377px;
+  justify-content: center;
+  position: relative;
+  width: 266px;
+}
+
+.landing-page-employeur .position-1 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-page-employeur .position-2 {
+  background-color: var(--masala);
+  border-radius: 8px;
+  height: 16px;
+  position: relative;
+  width: 16px;
+}
+
+.landing-page-employeur .position {
+  background-color: var(--gray-nurse);
+  border-radius: 6px;
+  height: 12px;
+  position: relative;
+  width: 12px;
+}
+
+.landing-page-employeur .chiffre-cl {
+  @apply tw-p-[40px_20px_80px] md:tw-p-[40px_72px_80px];
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  /* padding: 40px 72px 80px; */
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .appuyez-vous-sur-la {
+  @apply tw-text-[25px] md:tw-text-[calc(var(--font-size-xxxl))];
+  align-self: stretch;
+  color: transparent;
+  font-family: var(--font-family-aeonik_mgen-bold);
+  /* font-size: var(--font-size-xxxl); */
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .span0 {
+  color: var(--masala);
+}
+
+.landing-page-employeur .frame-427319162 {
+  @apply tw-grid tw-grid-cols-3;
+  align-items: stretch;
+  /* display: inline-flex; */
+  /* flex: 0 0 auto; */
+  gap: 32px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427319162-item {
+  @apply tw-gap-[10px] md:tw-gap-[24px];
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* gap: 24px; */
+  justify-content: start;
+  opacity: 0.96;
+  position: relative;
+  /* width: 215.75px; */
+}
+
+.landing-page-employeur .percent {
+  letter-spacing: 0;
+  line-height: 48px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .adhrents-satisfaits {
+  @apply md:tw-w-[207px];
+  color: var(--masala);
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  /* width: 207px; */
+}
+
+.landing-page-employeur .x75-ans {
+  letter-spacing: 0;
+  line-height: 48px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .dexistence-et-dexpertise {
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+  width: 207px;
+}
+
+.landing-page-employeur .text-1 {
+  letter-spacing: 0;
+  line-height: 48px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .conseillers-au-servi {
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+  width: 207px;
+}
+
+.landing-page-employeur .agent-section {
+  @apply tw-gap-[40px] tw-p-[20px_30px] lg:tw-p-[80px_72px] lg:tw-gap-[64px];
+  align-items: center;
+  background-color: #ffecf7;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  /* gap: 64px; */
+  justify-content: center;
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.landing-page-employeur .soutenez-votre-strat {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 64px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .span0-1 {
+  @apply tw-leading-3 md:tw-leading-[48px];
+  /* line-height: 48px; */
+}
+
+.landing-page-employeur .content-2 {
+  @apply tw-gap-[30px] tw-items-center md:tw-items-start lg:tw-gap-[24px];
+  align-self: stretch;
+  flex: 0 0 auto;
+  /* gap: 24px; */
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427319121 {
+  @apply tw-h-[400px] md:tw-h-[545px];
+  align-items: flex-start;
+  /* background-image: url(../img/frame-427319121.png); */
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* height: 545px; */
+  justify-content: flex-end;
+  position: relative;
+  max-width: 362.67px;
+}
+
+.landing-page-employeur .frame-427319127 {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.8) 62.29%);
+  border-radius: 24px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-right: -0.33px;
+  padding: 24px;
+  position: relative;
+  color: #ffff;
+  /* width: 363px; */
+}
+
+.landing-page-employeur .gagnez-en-srnit-a {
+  @apply tw-text-[20px] tw-leading-[32px] md:tw-leading-[calc(40/1280*100vw)] lg:tw-leading-[40px] md:tw-text-[calc(32/1280*100vw)] xl:tw-text-[32px];
+  align-self: stretch;
+  letter-spacing: 0;
+  /* font-size: 32px; */
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427319122 {
+  align-items: flex-start;
+  background-color: var(--green-pea);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 545px;
+  position: relative;
+  /* width: 362.67px; */
+}
+
+.landing-page-employeur .frame-427319092 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-image: url(../img/frame-427319092.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 545px;
+  justify-content: flex-end;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .personnalisez-nos-offres-vos-besoins {
+  letter-spacing: 0;
+  line-height: 40px;
+  position: relative;
+  width: 288px;
+}
+
+.landing-page-employeur .frame-427319123 {
+  align-items: flex-start;
+  background-image: url(../img/frame-427319123.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 545px;
+  justify-content: flex-end;
+  position: relative;
+  /* width: 362.67px; */
+}
+
+.landing-page-employeur .frame-427319165 {
+  align-items: center;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.8) 100%);
+  border-radius: 0px 0px 24px 24px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .grez-la-mutuelle-gr {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 40px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .tmoignages-rh {
+  align-items: center;
+  /* display: flex; */
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  max-width: 942px;
+  width: 100%;
+}
+
+.landing-page-employeur .dcouvrez-le-tmoignage-de-nos-clients {
+  color: var(--masala);
+  font-family: var(--font-family-aeonik_mgen-regular);
+  font-size: var(--font-size-xxxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 40px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .content-3 {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 24px;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.landing-page-employeur .prcdent {
+  align-items: center;
+  background-color: var(--masala);
+  border-radius: 80px;
+  display: flex;
+  gap: 8px;
+  height: 64px;
+  justify-content: center;
+  padding: 0px 8px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .tion {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.landing-page-employeur .card {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+  width: 750px;
+}
+
+.landing-page-employeur .rectangle-154 {
+  height: 179px;
+  object-fit: cover;
+  position: relative;
+  width: 265px;
+}
+
+.landing-page-employeur .frame-204 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-page-employeur .les-tches-administ {
+  align-self: stretch;
+  color: #737373;
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+}
+
+.landing-page-employeur .span1 {
+  letter-spacing: 0;
+}
+
+.landing-page-employeur .frame-204-1 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .mediasplay-circle-fill {
+  background-image: url(../img/play-circle-fill.svg);
+  background-size: 100% 100%;
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.landing-page-employeur .couter-lpisode {
+  color: #1e1e1e;
+  font-family: var(--font-family-arial-bold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: relative;
+  width: 213px;
+}
+
+.landing-page-employeur .suivant {
+  align-items: center;
+  background-color: var(--masala);
+  border-radius: 80px;
+  display: flex;
+  gap: 8px;
+  height: 64px;
+  justify-content: center;
+  padding: 0px 8px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .agents-section {
+  @apply tw-p-[80px_0px_40px_0px] lg:tw-p-[80px_0px_40px_72px];
+
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 23px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427319147 {
+  @apply tw-flex-col lg:tw-flex-row tw-px-[30px] lg:tw-pl-[42px] lg:tw-items-center;
+  
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 23px;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-page-employeur .container-text {
+  @apply lg:tw-max-w-[556px];
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  /* max-width: 556px; */
+}
+
+.landing-page-employeur .frame-427319152 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .prt-augmentez-la {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .et-leur-engagement {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.landing-page-employeur .cointainer-card::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.landing-page-employeur .cointainer-card {
+  
+  align-items: flex-start;
+  display: flex;
+  gap: 31px;
+  /* height: 590px; */
+  overflow: hidden;
+  overflow-x: scroll;
+  padding: 0px 72px 0px 0px;
+  position: relative;
+  width: 629px;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427319207 {
+  @apply tw-gap-[14px] md:tw-gap-[31px];
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  /* gap: 31px; */
+  padding: 0px 72px 0px 0px;
+  position: relative;
+}
+
+.landing-page-employeur .card-app {
+  @apply tw-w-[calc(100vw-100px)] tw-max-w-[416px] tw-h-[450px] md:tw-w-[calc(416/1280*100vw)] md:tw-h-[calc(590/1280*100vw)] xl:tw-w-[416px] xl:tw-h-[590px];
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  box-shadow: 0px 6.8px 16px 0.5px #3c3c3c4c;
+  /* height: 590px; */
+  justify-content: space-between;
+  /* width: 416px; */
+}
+
+.landing-page-employeur .content {
+  align-items: flex-start;
+  align-self: stretch;
+  background: linear-gradient(360deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.9) 50%);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .partage-facile-et-ra {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .en-savoir-plus {
+  align-items: flex-start;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.9) 100%);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .button-1 {
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 8px 0px;
+}
+
+.landing-page-employeur .button-2 {
+  flex-direction: column;
+}
+
+.landing-page-employeur .auto-layout-horizontal {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-page-employeur .card-teleconsultation {
+  background-image: url(../img/card-teleconsultation.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  height: 590px;
+  justify-content: space-between;
+  width: 411px;
+}
+
+.landing-page-employeur .tlconsultation-7j {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .card-remboursements {
+  background-color: #5a4691;
+  border-radius: 24px;
+  height: 590px;
+  width: 416px;
+}
+
+.landing-page-employeur .frame-427319202 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-image: url(../img/frame-427319202.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .remboursements-rapid {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .card-centre-daide {
+  align-items: center;
+  background-color: var(--green-pea);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 590px;
+  justify-content: space-around;
+  overflow: hidden;
+  position: relative;
+  width: 416px;
+}
+
+.landing-page-employeur .frame-103-1 {
+  background-image: url(../img/frame-103-1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  flex: 1;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.landing-page-employeur .content-4 {
+  align-items: flex-start;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.8) 100%);
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  width: 100%;
+}
+
+.landing-page-employeur .centre-daide-en-lig {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .card-coaching {
+  background-image: url(../img/card-coaching.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  height: 590px;
+  justify-content: space-between;
+  width: 416px;
+}
+
+.landing-page-employeur .frame-103-2 {
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.9) 100%);
+  flex: 0 0 auto;
+  gap: 16px;
+  padding: 32px;
+}
+
+.landing-page-employeur .coaching-sant-nutri {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .card-rseau-soin {
+  align-items: flex-start;
+  background-image: url(../img/card-r-seau-soin.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 590px;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  width: 416px;
+}
+
+.landing-page-employeur .rseau-de-soin-pour {
+  align-self: stretch;
+  color: var(--white);
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427318866 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 24px;
+  justify-content: flex-end;
+  padding: 0px 72px;
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+
+.landing-page-employeur .frame-427318866-item {
+  align-items: center;
+  background-color: var(--wild-sand);
+  border-radius: 80px;
+  display: flex;
+  gap: 8px;
+  height: 64px;
+  justify-content: center;
+  padding: 0px 8px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .chevronlight {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--wild-sand);
+  border-radius: 80px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-left: -8.00px;
+  margin-right: -8.00px;
+  padding: 0px 8px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .chevronlight-1 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--gray-nurse);
+  border-radius: 80px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-left: -8.00px;
+  margin-right: -8.00px;
+  padding: 0px 8px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .note-agents {
+  @apply tw-hidden md:tw-flex;
+  align-items: center;
+  /* display: flex; */
+  flex-direction: column;
+  gap: 77px;
+  height: 901px;
+  justify-content: flex-end;
+  padding: 40px 0px 0px;
+  position: relative;
+  /* width: 1280px; */
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427319171 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427319170 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427319169 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-page-employeur .frame-427319145 {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 185px;
+}
+
+.landing-page-employeur .frame-427318890 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .text-2 {
+  align-self: stretch;
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 64px;
+  text-align: center;
+}
+
+.landing-page-employeur .span0-2 {
+  font-weight: 700;
+  line-height: 72px;
+}
+
+.landing-page-employeur .span1-1 {
+  font-family: var(--font-family-arial-regular);
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.landing-page-employeur .frame-427318888 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 8px;
+  height: 25px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .vector {
+  height: 25px;
+  position: relative;
+  width: 27px;
+}
+
+.landing-page-employeur .group-14280 {
+  height: 25px;
+  position: relative;
+  width: 27.5px;
+}
+
+.landing-page-employeur .overlap-group-1 {
+  height: 25px;
+  position: relative;
+  width: 28px;
+}
+
+.landing-page-employeur .vector-1 {
+  height: 25px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 27px;
+}
+
+.landing-page-employeur .subtract {
+  height: 25px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 14px;
+}
+
+.landing-page-employeur .daprs-14-681-sur-avis-vrifis {
+  align-self: stretch;
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .cest-la-note-moyenn {
+  color: var(--masala);
+  font-family: var(--font-family-aeonik_mgen-bold);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .button-6 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--green-pea);
+  border-radius: 8px;
+  gap: 10px;
+  padding: 8px 32px;
+}
+
+.landing-page-employeur .note-agents-1 {
+  background-image: url(../img/note-agents@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 119px;
+  position: relative;
+  width: 168px;
+}
+
+.landing-page-employeur .engagement {
+  -webkit-backdrop-filter: blur(6px) brightness(100%);
+  align-items: center;
+  backdrop-filter: blur(6px) brightness(100%);
+  background-color: #e0f5e5;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 72px;
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.landing-page-employeur .vous-aussi-vous-auri {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.landing-page-employeur .carousel {
+  align-self: stretch;
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+  height: 524px;
+}
+
+.landing-page-employeur .x3-1 {
+  align-items: center;
+  background-image: url(../img/3-1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 368px;
+  justify-content: flex-end;
+  left: 773px;
+  position: absolute;
+  top: 78px;
+  /* width: 363px; */
+}
+
+.landing-page-employeur .frame-42731911 {
+  align-items: center;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgba(60, 60, 60, 0) 0%, rgba(60, 60, 60, 0.7) 100%);
+  border-radius: 0px 0px 24px 24px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .pour {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .soutien-aux-associat {
+  align-self: stretch;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .x2-1 {
+  align-items: center;
+  background-image: url(../img/2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 368px;
+  justify-content: flex-end;
+  left: 0;
+  position: absolute;
+  top: 78px;
+  /* width: 363px; */
+}
+
+.landing-page-employeur .projets-de-recherche {
+  align-self: stretch;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+}
+
+/* .landing-page-employeur .x1-1 {
+  align-items: center;
+  background-color: #2d418c;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-end;
+  left: 291px;
+  position: absolute;
+  top: 0;
+  height: 524px;
+  width: 556px;
+} */
+
+.landing-page-employeur .x1-1 {
+  @apply md:tw-h-[calc((524/1280)*100vw)] md:tw-w-[calc((556/1280)*100vw)] lg:tw-h-[calc((524/1280)*100vw)] lg:tw-w-[calc((556/1280)*100vw)] xl:tw-w-[556px] xl:tw-h-[524px];
+
+  align-items: center;
+  background-color: #2d418c;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-end;
+  left: 291px;
+  position: absolute;
+  top: 0;
+  /* padding-top: calc((556/524)*100vw); */
+  /* height: calc(524/1280 * 100vw);
+  width: calc(556/1280 * 100vw); */
+}
+
+.landing-page-employeur .frame-427319111 {
+  align-items: center;
+  align-self: stretch;
+  background-image: url(../img/frame-427319111.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .aides-sociales-aux-a {
+  align-self: stretch;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .position-3 {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+  width: 362px;
+}
+
+.landing-page-employeur .chevrondark {
+  align-items: center;
+  background-color: var(--masala);
+  border-radius: 80px;
+  display: flex;
+  gap: 8px;
+  height: 64px;
+  justify-content: center;
+  padding: 0px 8px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .chevrondark-1 {
+  align-items: center;
+  background-color: var(--masala);
+  border-radius: 80px;
+  display: flex;
+  gap: 8px;
+  height: 64px;
+  justify-content: center;
+  padding: 0px 8px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .contact {
+  @apply tw-p-[40px_20px_40px] md:tw-p-[80px_40px_40px] lg:tw-p-[80px_72px_40px];
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  /* padding: 80px 72px 40px; */
+  position: relative;
+  max-width: 1278px;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427319163 {
+  align-items: center;
+  display: flex;
+  height: 137px;
+  justify-content: center;
+  position: relative;
+  width: 298px;
+}
+
+.landing-page-employeur .group-14341 {
+  background-image: url(../img/image@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 116.79px;
+  position: relative;
+  width: 116.79px;
+}
+
+.landing-page-employeur .group-14342 {
+  background-image: url(../img/image-1@2x.png);
+  background-size: 100% 100%;
+  height: 116.79px;
+  margin-left: -32px;
+  position: relative;
+  width: 116.79px;
+}
+
+.landing-page-employeur .group-14343 {
+  background-image: url(../img/image-2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 116.79px;
+  margin-left: -32px;
+  position: relative;
+  width: 116.79px;
+}
+
+.landing-page-employeur .frame-42731915 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .recevez-une-simulati {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .lun-de-nos-expert-v {
+  color: var(--masala);
+  font-family: var(--font-family-arial-regular);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  /* width: 746px; */
+}
+
+.landing-page-employeur .actus {
+  @apply tw-p-[40px_20px_80px] md:tw-p-[40px_30px_80px] lg:tw-p-[40px_72px_80px];
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  /* padding: 40px 72px 80px; */
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-page-employeur .dernires-actualits {
+  align-self: stretch;
+  color: var(--masala);
+  font-weight: 700;
+  line-height: 40px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .articles {
+  @apply tw-grid tw-grid-cols-2 tw-gap-[10px] md:tw-gap-[24px] md:tw-inline-flex;
+  align-items: center;
+  /* display: inline-flex; */
+  flex: 0 0 auto;
+  /* gap: 24px; */
+  position: relative;
+}
+
+.landing-page-employeur .article {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  /* width: 264px; */
+  width: 100%;
+}
+
+.landing-page-employeur .pexels-photo-by-tima-miroshnichenko {
+  @apply tw-h-[270px] md:tw-h-[454px];
+  align-self: stretch;
+  /* height: 454px; */
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427319206 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .lorem-ipsum-dolor-si {
+  align-self: stretch;
+  letter-spacing: 0;
+  /* line-height: 28px; */
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .button-3 {
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.landing-page-employeur .line {
+  align-self: stretch;
+  height: 1px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427319173 {
+  @apply tw-p-[40px_20px_40px] md:tw-p-[80px_40px_40px] lg:tw-p-[80px_72px_40px];
+
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--gray-nurse);
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  /* padding: 80px 72px 40px; */
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-2608165 {
+  @apply tw-flex-col tw-gap-[20px] md:tw-gap-[40px] md:tw-flex-row tw-mx-auto;
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  /* gap: 40px; */
+  /* height: 152px; */
+  max-width: 1280px;
+  position: relative;
+}
+
+.landing-page-employeur .card-contents {
+  align-self: stretch;
+  background-color: var(--white);
+  border-radius: 16px;
+  flex: 1;
+  flex-grow: 1;
+  gap: 8px;
+  justify-content: center;
+  padding: 24px;
+}
+
+.landing-page-employeur .image-15 {
+  height: 71px;
+  position: relative;
+  width: 64px;
+}
+
+.landing-page-employeur .address {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .card-contents-1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 16px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 24px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-183 {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 80px;
+  justify-content: center;
+  padding: 12px 0px;
+  position: relative;
+  width: 80px;
+}
+
+.landing-page-employeur .image-10 {
+  align-self: stretch;
+  height: 66px;
+  margin-bottom: -5.00px;
+  margin-top: -5.00px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .grand-partenaire-paris-sant-campus {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .frame-183-1 {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 78px;
+  justify-content: center;
+  padding: 12px 0px;
+  position: relative;
+  width: 89px;
+}
+
+.landing-page-employeur .image-11 {
+  align-self: stretch;
+  height: 38px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .x445-note-moyenne-sur-avis-vrifis {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.landing-page-employeur .footer {
+  @apply tw-p-[40px_20px_80px] md:tw-p-[40px_72px_80px];
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--gray-nurse);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  /* padding: 40px 72px 80px; */
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427318909 {
+  @apply tw-mx-auto;
+  align-items: flex-start;
+  align-self: stretch;
+  border-color: #c3c8cd;
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 40px;
+  justify-content: center;
+  padding: 40px 0px;
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427318984 {
+  @apply tw-gap-[40px] tw-grid tw-grid-cols-2 md:tw-grid-cols-3;
+  /* md:tw-gap-[40px]; */
+  align-items: flex-start;
+  /* display: inline-flex; */
+  /* display: grid; */
+  /* grid-template-columns: ; */
+  /* flex: 0 0 auto; */
+  position: relative;
+}
+
+.landing-page-employeur .frame-19 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  /* width: 195px; */
+}
+
+.landing-page-employeur .frame-6 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-54 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .employeur {
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .support-1 {
+  color: var(--masala);
+  flex: 1;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-70 {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 132px;
+  /* width: 195px; */
+}
+
+.landing-page-employeur .particuliers {
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .obtenir-un-devis {
+  color: var(--masala);
+  flex: 1;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .aide-et-contact {
+  color: var(--masala);
+  flex: 1;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-70-1 {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 100px;
+  /* width: 195px; */
+}
+
+.landing-page-employeur .dcouvrir {
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .valeurs-et-engagements {
+  color: var(--masala);
+  flex: 1;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .presse {
+  color: var(--masala);
+  flex: 1;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .frame-195 {
+  @apply tw-flex-col md:tw-flex-row tw-gap-[20px] tw-mx-auto;
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.landing-page-employeur .frame-427318908 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 35px;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing-page-employeur .frame {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.landing-page-employeur .plan-du-site {
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .accessibilit {
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .conditions-gnrales-d-utilisation {
+  color: var(--masala);
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .frame-427318907 {
+  align-items: flex-end;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 32px;
+  position: relative;
+}
+
+.landing-page-employeur .image-13, .landing-page-employeur .image-14  {
+  height: 43px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+/* .landing-page-employeur .image-14 {
+  height: 44px;
+  position: relative;
+  width: 146px;
+} */
+
+.landing-page-employeur .button-7 {
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-page-employeur .card-1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.landing-page-employeur .content-5 {
+  @apply tw-flex tw-flex-col md:tw-grid md:tw-grid-cols-3;
+  /* display: flex; */
+  position: relative;
+}
+
+.landing-page-employeur .frame-103-3 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.landing-page-employeur .label-4 {
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.landing-page-employeur .nous {
+  color: var(--masala);
+  flex: 1;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .text {
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.landing-page-employeur .values-3 {
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 24px;
+  position: relative;
+}
+
