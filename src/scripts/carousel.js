@@ -1,27 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
   const carouselWrap = document.getElementById('mgen-carousel');
   const carouselContainer = carouselWrap.querySelector('.carousel--container');
-  const carouselItems = carouselContainer.querySelectorAll('.carousel--item');
+  const carouselItems = Array.from(carouselContainer.querySelectorAll('.carousel--item'));
   const itemCount = carouselItems.length;
-  let currentIndex = 0;
-  const gapX = 15;
-  const itemsToShow = 3;
+  let currentIndex = 1;
+  const itemWidth = 266; 
   const containerWidth = carouselContainer.getBoundingClientRect().width;
-  
-  // const itemWidth = containerWidth / itemsToShow;
-  const itemWidth = 266;
-  const itemSpace = (itemWidth+gapX || (containerWidth / (itemsToShow)));
-  // carouselItems
 
-  // Initial positioning
+  // Calculate center position
+  const centerX = (containerWidth - itemWidth) / 2;
+
+  // Position items initially
   const positionItems = () => {
     carouselItems.forEach((item, index) => {
-      const offset = (currentIndex + index) % itemCount;
-      console.log(item.computedStyleMap())
-      item.style.width = `${(itemWidth - gapX)}px`;
-      // item.style.left = `${(gapX/2)}px`;
-      item.style.zIndex = offset;
-      item.style.transform = `translateX(${(offset*(itemSpace))}px) ${offset == 1 ? 'scale(1.1)' : 'scale(1)'}`;
+      const offset = (index - currentIndex + itemCount) % itemCount;
+      const xTranslate = (offset - 1) * (itemWidth + 30) + centerX; 
+      const zIndex = offset;
+
+      item.style.width = `${itemWidth}px`;
+      item.style.position = 'absolute'; // Ensure absolute positioning
+      item.style.zIndex = zIndex;
+      item.style.transform = `translateX(${xTranslate}px) ${offset === 1 ? 'scale(1.1)' : 'scale(1)'}`;
     });
   };
 
@@ -29,10 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Rotation logic
   setInterval(() => {
-    currentIndex = (currentIndex + 1) % itemCount;
-    // if (currentIndex >= itemCount) {
-    //   currentIndex = 0;
-    // }
+    currentIndex = (currentIndex - 1) % itemCount;
     positionItems();
   }, 2000);
 });
