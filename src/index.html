@@ -11,7 +11,7 @@
     <meta name="twitter:card" content="photo" /> -->
     <link rel="stylesheet" type="text/css" href="css/tailwind.css" />
   </head>
-  <body style="margin: 0; background: #ffffff">
+  <body class="tw-h-screen" style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="landing-page-employeur" />
     <div class="landing-page-employeur screen">
       <div class="head">
@@ -43,10 +43,10 @@
             </div>
           </div>
           <div class="frame-427318978 tw-hidden sm:tw-flex">
-            <div class="frame-427318968 tw-hidden md:tw-inline-flex">
+            <button class="frame-427318968  hover:tw-bg-gray-300/10 tw-rounded-lg tw-hidden md:tw-inline-flex">
               <img class="frame-427318969" src="img/frame-427318969.svg" alt="Frame 427318969" />
               <div class="support arial-bold-masala-12px">Support</div>
-            </div>
+            </button>
             <div class="frame-427318981">
               <div class="button-4 button-7 tw-hidden sm:tw-inline-flex">
                 <img class="common-actionsuser" src="img/common-actions-user.svg" alt="Common actions/user" />
@@ -66,39 +66,51 @@
           </div>
         </header>
       </div>
-      <div class="hero">
+      <section class="hero">
         <div class="content-1 !tw-flex">
           <div class="mgen-mutuelle-sant mgenheadingssubheading">MGEN Mutuelle Santé</div>
           <h1 class="la-premire-mutuelle">La première mutuelle des agents du service public</h1>
           <div class="button"><div class="label-1 label-4 arial-bold-white-16px">Prendre rendez-vous</div></div>
         </div>
-      </div>
-      <div class="top-cta">
+      </section>
+      <section class="top-cta">
         <p class="choisissez-le-meille aeonikmgen-bold-masala-64px">
           <span class="aeonikmgen-bold-masala-64px">Choisissez le meilleur des solutions <br /></span
           ><span class="aeonikmgen-regular-normal-masala-64px">en mutuelle santé</span>
         </p>
-        <div class="values-1 values-3">
-          <div class="values-2 values-3">
-            <div class="x1">
+        <div id="mgen-carousel" class="values-1 values-3 tw-h-[513px]">
+          <div class="values-2 values-3 carousel--container tw-w-full tw-h-full tw-mx-auto tw-max-w-[891px]">
+            <!-- <div class="x1">
               <div class="frame-42731916"><p class="x-et">Prévention et soin de la santé mentale et physique.</p></div>
-            </div>
-            <div class="x2">
-              <div class="frame-103">
-                <p class="une-appli-mobile-pou">Une appli mobile pour prendre soin de sa santé partout.</p>
+            </div> -->
+            <div class="x2 carousel--item">
+              <div class="frame-103 tw-overflow-hidden">
+                <!-- <p class="une-appli-mobile-pou">Une appli mobile pour prendre soin de sa santé partout.</p> -->
+                 <img class="tw-w-full tw-h-full tw-object-cover" src="./img/top-cta/1.svg" />
               </div>
             </div>
-            <div class="x3">
-              <div class="frame-42731916"><p class="x-et">Des remboursements rapides et clairs.</p></div>
+            <div class="x2 carousel--item">
+              <div class="frame-103 tw-overflow-hidden">
+                <!-- <p class="une-appli-mobile-pou">Une appli mobile pour prendre soin de sa santé partout.</p> -->
+                 <img class="tw-w-full tw-h-full tw-object-cover" src="./img/top-cta/2.svg" />
+              </div>
+            </div>
+            <div class="x2 carousel--item">
+              <div class="frame-103 tw-overflow-hidden">
+                <!-- <p class="une-appli-mobile-pou">Une appli mobile pour prendre soin de sa santé partout.</p> -->
+                 <img class="tw-w-full tw-h-full tw-object-cover" src="./img/top-cta/3.svg" />
+              </div>
             </div>
           </div>
-          <div class="position-1">
+
+          <!-- Carousel Bullets -->
+          <!-- <div class="position-1 carousel--bullets">
             <article class="position-2"></article>
             <article class="position"></article>
             <article class="position"></article>
-          </div>
+          </div> -->
         </div>
-      </div>
+      </section>
       <div class="chiffre-cl">
         <p class="appuyez-vous-sur-la">
           <span class="span0">Appuyez-vous sur la solidité d’une mutuelle de<br /></span
@@ -168,7 +180,7 @@
           <p class="tw-text-[var(--masala)] tw-text-[20px] md:tw-text-[40px] tw-leading-[40px] tw-text-center tw-mt-[-px] md:tw-text-nowrap tw-w-fit">Découvrez le témoignage de nos clients</p>
           <div class="content-3">
             <div class="prcdent"><img class="tion" src="img/navigation-chevron.svg" alt="Navigation/chevron" /></div>
-            <div class="card">
+            <div class="testimonial-item">
               <img class="rectangle-154" src="img/rectangle-154@2x.png" alt="Rectangle 154" />
               <div class="frame-204">
                 <p class="les-tches-administ mgenbodybody-regular">
@@ -198,9 +210,9 @@
             </div>
             <div class="button tw-mx-auto lg:tw-mx-0"><div class="label-1 label-4 arial-bold-white-16px">Prendre rendez-vous</div></div>
           </div>
-          <div class="cointainer-card">
-            <div class="frame-427319207">
-              <div class="card-app card-1">
+          <div class="cointainer-card" id="card-sliders">
+            <div class="frame-427319207 slider--container">
+              <div class="card-app card-1 slider--item">
                 <div class="content tw-z-20">
                   <p class="partage-facile-et-ra arial-bold-white-24px">
                     Partage facile et rapide de la carte mutuelle à la pharmacie ou encore à ses enfants
@@ -210,8 +222,8 @@
                 <div class="en-savoir-plus tw-z-20">
                   <div class="button-1 button-7">
                     <div class="button-2 button-7">
-                      <div class="auto-layout-horizontal">
-                        <div class="label arial-bold-white-16px">En savoir plus</div>
+                      <div class="tw-cursor-pointer hover:tw-bg-gray-400/10 tw-p-2 tw-rounded-lg auto-layout-horizontal">
+                        <div class="label--readmore">En savoir plus</div>
                         <img class="tion" src="img/common-actions.svg" alt="Common actions" />
                       </div>
                     </div>
@@ -219,7 +231,7 @@
                 </div>
               </div>
 
-              <div class="card-app card-1">
+              <div class="card-app card-1 slider--item">
                 <div class="content tw-z-20">
                   <p class="partage-facile-et-ra arial-bold-white-24px">
                     Téléconsultation 7j/7 et 24h/24 de médecins et spécialistes avec remboursement immédiat.
@@ -229,8 +241,8 @@
                 <div class="en-savoir-plus tw-z-20">
                   <div class="button-1 button-7">
                     <div class="button-2 button-7">
-                      <div class="auto-layout-horizontal">
-                        <div class="label arial-bold-white-16px">En savoir plus</div>
+                      <div class="tw-cursor-pointer hover:tw-bg-gray-400/10 tw-p-2 tw-rounded-lg auto-layout-horizontal">
+                        <div class="label--readmore">En savoir plus</div>
                         <img class="tion" src="img/common-actions.svg" alt="Common actions" />
                       </div>
                     </div>
@@ -238,7 +250,7 @@
                 </div>
               </div>
 
-              <div class="card-app card-1">
+              <div class="card-app card-1 slider--item">
                 <div class="content tw-z-20">
                   <p class="partage-facile-et-ra arial-bold-white-24px">
                     Remboursements rapides et expliqués pour aborder ses dépenses de santé avec sérénité.
@@ -248,8 +260,8 @@
                 <div class="en-savoir-plus tw-z-20">
                   <div class="button-1 button-7">
                     <div class="button-2 button-7">
-                      <div class="auto-layout-horizontal">
-                        <div class="label arial-bold-white-16px">En savoir plus</div>
+                      <div class="tw-cursor-pointer hover:tw-bg-gray-400/10 tw-p-2 tw-rounded-lg auto-layout-horizontal">
+                        <div class="label--readmore">En savoir plus</div>
                         <img class="tion" src="img/common-actions.svg" alt="Common actions" />
                       </div>
                     </div>
@@ -257,7 +269,7 @@
                 </div>
               </div>
 
-              <div class="card-app card-1">
+              <div class="card-app card-1 slider--item">
                 <div class="content tw-z-20">
                   <p class="partage-facile-et-ra arial-bold-white-24px">
                     Centre d’aide en ligne à leur service par message, chat, ou téléphone
@@ -267,8 +279,8 @@
                 <div class="en-savoir-plus tw-z-20">
                   <div class="button-1 button-7">
                     <div class="button-2 button-7">
-                      <div class="auto-layout-horizontal">
-                        <div class="label arial-bold-white-16px">En savoir plus</div>
+                      <div class="tw-cursor-pointer hover:tw-bg-gray-400/10 tw-p-2 tw-rounded-lg auto-layout-horizontal">
+                        <div class="label--readmore">En savoir plus</div>
                         <img class="tion" src="img/common-actions.svg" alt="Common actions" />
                       </div>
                     </div>
@@ -276,7 +288,7 @@
                 </div>
               </div>
 
-              <div class="card-app card-1">
+              <div class="card-app card-1 slider--item">
                 <div class="content tw-z-20">
                   <p class="partage-facile-et-ra arial-bold-white-24px">
                     Coaching santé nutrition, sport,&nbsp;&nbsp;stress, sommeil et bien plus encore pour prévenir.
@@ -286,8 +298,8 @@
                 <div class="en-savoir-plus tw-z-20">
                   <div class="button-1 button-7">
                     <div class="button-2 button-7">
-                      <div class="auto-layout-horizontal">
-                        <div class="label arial-bold-white-16px">En savoir plus</div>
+                      <div class="tw-cursor-pointer hover:tw-bg-gray-400/10 tw-p-2 tw-rounded-lg auto-layout-horizontal">
+                        <div class="label--readmore">En savoir plus</div>
                         <img class="tion" src="img/common-actions.svg" alt="Common actions" />
                       </div>
                     </div>
@@ -295,7 +307,7 @@
                 </div>
               </div>
 
-              <div class="card-app card-1">
+              <div class="card-app card-1 slider--item">
                 <div class="content tw-z-20">
                   <p class="partage-facile-et-ra arial-bold-white-24px">
                     Réseau de soin pour les lunettes, le dentiste, les appareils auditifs et l’ostéo
@@ -305,8 +317,8 @@
                 <div class="en-savoir-plus tw-z-20">
                   <div class="button-1 button-7">
                     <div class="button-2 button-7">
-                      <div class="auto-layout-horizontal">
-                        <div class="label arial-bold-white-16px">En savoir plus</div>
+                      <div class="tw-cursor-pointer hover:tw-bg-gray-400/10 tw-p-2 tw-rounded-lg auto-layout-horizontal">
+                        <div class="label--readmore">En savoir plus</div>
                         <img class="tion" src="img/common-actions.svg" alt="Common actions" />
                       </div>
                     </div>
@@ -318,16 +330,16 @@
             </div>
           </div>
         </div>
-        <div class="frame-427318866">
+        <div class="frame-427318866" id="card-sliders-buttons">
           <div class="frame-427318866-item">
-            <div class="chevronlight">
+            <button class="chevronlight slider--prev">
               <img class="tion" src="img/navigation-chevron-2.svg" alt="Navigation/chevron" />
-            </div>
+            </button>
           </div>
           <div class="frame-427318866-item">
-            <div class="chevronlight-1">
+            <button class="chevronlight-1 slider--next">
               <img class="tion" src="img/navigation-chevron-3.svg" alt="Navigation/chevron" />
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -362,46 +374,74 @@
             <div class="label-1 label-4 arial-bold-green-pea-16px">Lire leur témoignages</div>
           </div>
         </div>
-        <div class="note-agents-1"></div>
+        <div class="note-agents-1 tw-max-w-[664px]" id="scroll-animation">
+          <img class="tw-w-full tw-h-full" src="./img/note-agents@2x.png" />
+        </div>
       </div>
-      <div class="engagement !tw-hidden md:!tw-inline-flex">
+      <div class="engagement !tw-inline-flex">
         <p class="vous-aussi-vous-auri aeonikmgen-bold-masala-64px">
           <span class="aeonikmgen-bold-masala-64px">Vous aussi vous auriez raison<br /></span
           ><span class="aeonikmgen-regular-normal-masala-64px">de préférer MGEN</span>
         </p>
-        <div class="carousel">
-          <!-- <div class="x3-1">
-            <div class="frame-42731911">
-              <div class="pour aeonikmgen-bold-white-28px">Pour mieux vieillir</div>
-              <p class="soutien-aux-associat mgenheadingssubheading">
-                Soutien aux associations pour bien-être des personnes âgées.
-              </p>
-            </div>
-          </div> -->
-          <!-- <div class="x2-1">
-            <div class="frame-42731911">
-              <div class="pour aeonikmgen-bold-white-28px">Pour la recherche</div>
-              <p class="projets-de-recherche mgenheadingssubheading">Projets de recherche lutte contre le cancer.</p>
-            </div>
-          </div> -->
-          <div class="x1-1">
-            <div class="frame-427319111">
+        <div id="vous-carousel" class="carousel">
+          <div class="tw-w-full tw-h-[524px] tw-relative tw-flex carousel--container tw-overflow-hidden">
+              <!-- <div class="x3-1">
               <div class="frame-42731911">
-                <div class="pour aeonikmgen-bold-white-28px">Pour le progrès social</div>
-                <p class="aides-sociales-aux-a mgenheadingssubheading">
-                  Aides sociales aux adhérents en difficultés financières.
+                <div class="pour aeonikmgen-bold-white-28px">Pour mieux vieillir</div>
+                <p class="soutien-aux-associat mgenheadingssubheading">
+                  Soutien aux associations pour bien-être des personnes âgées.
                 </p>
               </div>
+            </div> -->
+            <div class="x2-1 tw-overflow-hidden carousel--item">
+              <div class="tw-w-full tw-h-full tw-relative tw-flex">
+                <img class="tw-absolute tw-w-full tw-h-full tw-object-cover" src="./img/3-1@2x.png" />
+                <div class="frame-42731911">
+                  <div class="pour aeonikmgen-bold-white-28px">Pour la recherche</div>
+                  <p class="projets-de-recherche mgenheadingssubheading">Projets de recherche lutte contre le cancer.</p>
+                </div>
+              </div>
             </div>
+
+            <div class="x2-1 tw-overflow-hidden carousel--item">
+              <div class="tw-w-full tw-h-full tw-relative tw-flex">
+                <img class="tw-absolute tw-w-full tw-h-full tw-object-cover" src="./img/2@2x.png" />
+                <div class="frame-42731911">
+                  <div class="pour aeonikmgen-bold-white-28px">Pour la recherche</div>
+                  <p class="projets-de-recherche mgenheadingssubheading">Projets de recherche lutte contre le cancer.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="x2-1 tw-overflow-hidden carousel--item tw-bg-[#2d418c]">
+              <div class="tw-w-full tw-h-full tw-relative tw-flex">
+                <img class="tw-absolute tw-w-full tw-h-full tw-object-cover" src="./img/frame-427319111.png" />
+                <div class="frame-42731911">
+                  <div class="pour aeonikmgen-bold-white-28px">Pour la recherche</div>
+                  <p class="projets-de-recherche mgenheadingssubheading">Projets de recherche lutte contre le cancer.</p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="x1-1">
+              <div class="frame-427319111">
+                <div class="frame-42731911">
+                  <div class="pour aeonikmgen-bold-white-28px">Pour le progrès social</div>
+                  <p class="aides-sociales-aux-a mgenheadingssubheading">
+                    Aides sociales aux adhérents en difficultés financières.
+                  </p>
+                </div>
+              </div>
+            </div> -->
           </div>
-        </div>
-        <div class="position-3">
-          <article class="chevrondark">
-            <img class="tion" src="img/navigation-chevron-4.svg" alt="Navigation/chevron" />
-          </article>
-          <article class="chevrondark-1">
-            <img class="tion" src="img/navigation-chevron-5.svg" alt="Navigation/chevron" />
-          </article>
+
+          <div class="position-3 tw-mx-auto tw-mt-[40px]">
+            <button class="chevrondark carousel--prev">
+              <img class="tion" src="img/navigation-chevron-4.svg" alt="Navigation/chevron" />
+            </button>
+            <button class="chevrondark-1 carousel--next">
+              <img class="tion" src="img/navigation-chevron-5.svg" alt="Navigation/chevron" />
+            </button>
+          </div>
         </div>
       </div>
       <div class="contact">
@@ -598,5 +638,10 @@
         </div>
       </footer>
     </div>
+
+    <script src="./scripts/carousel.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/scroll-observer.js"></script>
+    <script src="./scripts/sliders.js"></script>
   </body>
 </html>
